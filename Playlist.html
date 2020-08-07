@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Spotify Playlist Seacher</title>
+  <style>
+        table {
+          border-collapse: collapse;
+          width: 90%;
+        }
+        table, th, td {
+          border: 1px solid black;
+        }
+        th, td {
+            width: 30%;
+        }
+        tbody, tfoot {
+            cursor: pointer;
+        }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Search for a playlist</h1>
+        <p>Type an playlist name and click on "Search"</p>
+        <form id="search-form">
+            <input type="text" id="nameQuery" value="" class="form-control" placeholder="Playlist Name"/>
+            <input type="submit" id="search" class="btn btn-primary" value="Search" />
+        </form>
+        <p>Otherwise see My Playlists (both created and followed):</p>
+        <button type="button" onclick="DevinPlaylists()">Show Devin's Playlists</button>
+        <div id="results">
+            <h1>Results:</h1>
+            <p>Click on a playlist to see it's songs</p>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Owner</th>
+                        <th>Songs</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+                <tfoot id="tableFoot"></tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="PlaylistJS/searcherScript.js"></script>
+</body>
+</html>

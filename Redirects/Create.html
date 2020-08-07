@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Playlist Creater</title>
+  <style>
+      table {
+        border-collapse: collapse;
+        width: 90%;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      th, td {
+          width: 30%;
+      }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Selected Playlist:</h1>
+        <p id='playlistName'></p>
+        <p id='playlistOwner'></p>
+        <p id='playlistNumSongs'></p>
+        <div id="playlistSongs">
+            <h1>Songs:</h1>
+            <table id="songTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Album</th>
+                        <th>Artist</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../PlaylistJS/creatorScript.js"></script>
+</body>
+</html>
